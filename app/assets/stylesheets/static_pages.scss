@@ -1,0 +1,163 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+   background-color: #DEF2F1;
+}
+
+#main-title {
+  padding: 50px 0 0 120px;
+  color:#17252a;
+}
+
+.wrapper{
+  display: flex;
+  position: relative;
+  padding:40px 70px 80px 70px;
+}
+//hide mobile nav icons
+#open-nav-icon {
+  display:none;
+}
+#close-nav-icon {
+  display:none;
+}
+
+.wrapper .sidebar{
+  width: 200px;
+  height: 100%;
+  background: #DEF2F1;
+  padding: 30px 0px;
+  position: absolute;
+
+}
+
+.wrapper .sidebar h2{
+  color: #FEFFFF;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.wrapper .sidebar ul li{
+  padding: 15px;
+  border-bottom: 1px solid #bdb8d7;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  border-top: 1px solid rgba(255,255,255,0.05);
+
+}
+
+.wrapper .sidebar ul li a{
+  color: black;
+  display: block;
+  text-align: right;
+}
+
+.wrapper .sidebar ul li a .fas{
+  width: 25px;
+}
+
+.wrapper .sidebar ul li:hover{
+  background-color: #CDF4F1;
+}
+
+.wrapper .sidebar ul li:hover a{
+  color: #17252a;
+}
+
+.wrapper .sidebar .social_media{
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  padding-bottom: px;
+}
+
+.wrapper .sidebar .social_media a{
+  display: block;
+  width: 40px;
+  background: #CDF4F1;
+  height: 40px;
+  line-height: 45px;
+  text-align: center;
+  margin: 0 5px;
+  color: #3aafa9;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.wrapper .sidebar .social_media a:hover{
+  color:#17252a;
+}
+
+.wrapper .main_content{
+  width: 100%;
+  margin-left: 200px;
+  background: white;
+  border-left: 2px solid black;
+}
+
+.wrapper .main_content .header{
+  padding: 20px 20px 5px 20px;
+  background: white;
+  color: black;
+  border-bottom: 1px solid #e0e4e8;
+  font-size: 200%;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.wrapper .main_content .info{
+  margin: 20px;
+  color: #717171;
+  line-height: 25px;
+}
+
+.wrapper .main_content .info div{
+  margin-bottom: 20px;
+}
+
+
+//mobile optimization
+
+@media (max-width: 767px) {
+
+  //greatly reduce white space around edges of page
+  .wrapper {
+    padding:10px 10px 10px 10px;
+  }
+
+  //remove nav bar from left side
+  .wrapper .sidebar {
+    display:none;
+  }
+
+  //center content after nav bar is gone
+  .wrapper .main_content{
+    margin-left:0;
+    border-left:none;
+  }
+
+  //render open and close icons on mobile
+  #open-nav-icon {
+    display:block;
+    margin-top:53px;
+    margin-left:40px;
+    position:absolute;
+
+  }
+  #close-nav-icon {
+    display:block;
+  }
+}
