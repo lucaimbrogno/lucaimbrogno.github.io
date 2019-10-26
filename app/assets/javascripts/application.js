@@ -10,11 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
+//= require jquery3
+//= require jquery_ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-
 
 /**
  * main.js
@@ -63,8 +63,7 @@
 		this.options = extend( {}, this.options );
 		extend( this.options, options );
 
-		// the menus (
-´s)
+		// the menus (´s)
 		this.menus = [].slice.call(this.el.querySelectorAll('.menu__level'));
 		// index of current menu
 		this.current = 0;

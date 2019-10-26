@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   root "static_pages#home"
 
-  get "employment" => "experiences#employment"
+  get "experiences" => "static_pages#experiences"
 
+  get "stock_game" => "trading_strategies#stock_game"
 
 
 end

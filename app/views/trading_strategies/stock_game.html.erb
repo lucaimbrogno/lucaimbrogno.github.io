@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+	<title>Luca Imbrogno - Stock Trading Game</title>
+</head>
+<body>
+	<a href="#" onclick="openSideMenu()">
+	    <i class="fas fa-bars" id="open-nav-icon"></i>
+	</a>
+<h1 id="main-title">LUCA IMBROGNO</h1>
+<div class="wrapper">
+
+    <div class="sidebar">
+			<%= render :partial => "/utilities/header" %>
+    </div>
+
+    <div class="main_content">
+		<div class="info">
+			<div>Try your luck and compete against a trading algorithm on this 5 year historical dataset for AAPL stock. When you're ready, press start to begin the simulation and use the BUY and SELL buttons to start trading. You can use the dropdown menus to select different time horizons and different datasets. Your trades will appear on the graph as blue dots and my algorithm's trades will appear as green dots. </div>
+		</div>
+      	<%= render :partial => "/trading_strategies/stock_chart", :locals => {:data => @graph_data} %>
+
+		<div class="info" id="controls">
+			<button class="btn btn-primary" id="start-button" name="button" onclick="runSim()">
+				Start
+			</button>
+			<button class="btn btn-primary" id="reset-button" name="button" onclick="reset()">
+				Reset
+			</button>
+			<button class="btn btn-primary" id="buy-button" name="button" onClick="buy()">
+				 BUY
+			</button>
+			<button class="btn btn-primary" id="sell-button" name="button" onClick="sell()">
+				SELL
+			</button>
+			<select id="stock-selections">
+				<option value="volvo">AAPL Stock</option>
+				<option value="saab">INTC Stock</option>
+				<option value="mercedes">MSFT Stock</option>
+				<option value="audi">S&P Index</option>
+			</select>
+		</div>
+
+		<div class="text-bubble">
+			Your Profit: <%= @test_data %>
+		</div>
+	</div>
+
+</div>
+
+
+
+	<script type="text/javascript" src="http://code.highcharts.com/stock/highstock.js"></script>
+	<%= javascript_include_tag "mobile_nav_animations"  %>
+	<%= javascript_include_tag "trading"  %>
+</body>
+</html>

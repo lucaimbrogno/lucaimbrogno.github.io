@@ -3,4 +3,7 @@ class StaticPagesController < ApplicationController
 
   end
 
+  def experiences
+
+  end
 end

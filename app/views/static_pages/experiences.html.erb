@@ -1,14 +1,18 @@
-<%= javascript_include_tag "mobile_nav_animations"  %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<%= javascript_include_tag "mobile_nav_animations"  %>
 	<meta charset="UTF-8">
 	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 	<title>Luca Imbrogno - Experience</title>
 </head>
 <body>
-<i class="fas fa-bars" id="nav-icon"></i>
+	<a href="#" onclick="openSideMenu()">
+	    <i class="fas fa-bars" id="open-nav-icon"></i>
+	</a>
 <h1 id="main-title">LUCA IMBROGNO</h1>
 <div class="wrapper">
 
@@ -17,7 +21,7 @@
     </div>
 
     <div class="main_content">
-      <%= render :partial => "/experiences/experience_panels" %>
+      <%= render :partial => "/static_pages/experience_panels" %>
     </div>
 
 </div>
