@@ -1,5 +1,15 @@
 
 <div id="chart" style="height:400px;"></div>
-<%= hidden_field_tag "full_data", @full_data, { :id => "full_data" } %>
-<%= hidden_field_tag "graph_data", @graph_data, { :id => "graph_data" } %>
+<%= hidden_field_tag "aapl_time", @aapl_data[:time], { :id => "aapl_time" } %>
+<%= hidden_field_tag "aapl_price", @aapl_data[:price], { :id => "aapl_price" } %>
 
+<%= hidden_field_tag "intc_time", @intc_data[:time], { :id => "intc_time" } %>
+<%= hidden_field_tag "intc_price", @intc_data[:price], { :id => "intc_price" } %>
+
+<%= hidden_field_tag "msft_time", @msft_data[:time], { :id => "msft_time" } %>
+<%= hidden_field_tag "msft_price", @msft_data[:price], { :id => "msft_price" } %>
+
+<%= hidden_field_tag "spy_time", @spy_data[:time], { :id => "spy_time" } %>
+<%= hidden_field_tag "spy_price", @spy_data[:price], { :id => "spy_price" } %>
+
+<%= hidden_field_tag "test_data", @test_data, { :id => "test_data" } %>

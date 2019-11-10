@@ -1,9 +1,8 @@
 var stock_chart;
-var full_data;
+var stock_sim;
 var cash = 0;
 function buy() {
         var buy_flags = stock_chart.series[1];
-        console.log("ye");
         var line = stock_chart.series[0];
         var x_data = line.processedXData;
         var y_data = line.processedYData;
@@ -16,7 +15,6 @@ function buy() {
 
 function sell() {
         var sell_flags = stock_chart.series[2];
-        console.log("ye");
         var line = stock_chart.series[0];
         var x_data = line.processedXData;
         var y_data = line.processedYData;
@@ -27,10 +25,12 @@ function sell() {
         cash = cash + y;
 }
 function runSim() {
-        full_data = $('#full_data').val().split(" ").map(function (item) {
-                return parseInt(item, 10);
-        });
 
+        equity = $('option:selected').val();
+        ticker = equity.toUpperCase();
+        title = ticker;
+        time_data = $('#' + equity + '_time').val().split(" ");
+        date_string = time_data[0] + ' - ' + time_data[time_data.length-1];
 
         stock_chart = Highcharts.chart('chart', {
                 chart: {
@@ -43,22 +43,19 @@ function runSim() {
 
                                         var series = this.series;
                                         var i = 0;
-                                        var stock_sim = setInterval(function () {
+                                        stock_sim = setInterval(function () {
 
-                                                full_data = $('#full_data').val().split(" ").map(function (item) {
-                                                        return parseInt(item, 10);
-                                                });
-                                                if (i == full_data.length - 1) {
+                                          x_data = $('#' + equity + '_time').val().split(" ");
+                                          y_data = $('#' + equity + '_price').val().split(" ");
+                                                if (i == x_data.length - 1) {
                                                         clearInterval(stock_sim);
                                                         results();
                                                 }
 
-                                                var y = full_data[i];
-                                                try {
-                                                        series[0].addPoint(y, true, false, false, false);
-                                                } catch (err) {
-                                                        //do nothing because this error seems to be irrelevant
-                                                }
+                                                var x = Date.parse(x_data[i]);
+                                                var y = parseFloat(y_data[i]);
+
+                                                series[0].addPoint([x,y], true, false, false, false);
                                                 i++;
 
                                         }, 250);
@@ -67,11 +64,11 @@ function runSim() {
                 },
 
                 title: {
-                        text: 'AAPL Stock Price'
+                        text: title
                 },
 
                 subtitle: {
-                        text: 'date-date'
+                        text: date_string
                 },
 
                 yAxis: {
@@ -90,19 +87,14 @@ function runSim() {
                 plotOptions: {
 
                         series: {
-                                marker: {
-                                        enabled: false
-                                },
-                                label: {
-                                        connectorAllowed: false
-                                },
-                                pointStart: Date.UTC(2015, 0, 1),
-                                pointInterval: 24 * 3600 * 1000
-                        }
+                          data:[],
+                          marker: {
+                            enabled:false
+                          }
+                                }
                 },
-
                 series: [{
-                        name: 'Stock',
+                        name: ticker,
                         data: [],
                         id: 'dataseries'
                 },
@@ -151,6 +143,12 @@ function results(){
 
 function reset(){
         //$('.text-bubble').css('display','none');
+        clearInterval(stock_sim);
+        equity = $('option:selected').val();
+        ticker = equity.toUpperCase();
+        title = ticker + " Stock";
+        time_data = $('#' + equity + '_time').val().split(" ");
+        date_string = time_data[0] + ' - ' + time_data[time_data.length-1];
 
         stock_chart = Highcharts.chart('chart', {
                 chart: {
@@ -160,11 +158,11 @@ function reset(){
                 },
 
                 title: {
-                        text: 'AAPL Stock Price'
+                        text: title
                 },
 
                 subtitle: {
-                        text: 'data-date'
+                        text: date_string
                 },
 
                 yAxis: {
@@ -186,13 +184,12 @@ function reset(){
                                 },
                                 label: {
                                         connectorAllowed: false
-                                },
-                                pointStart: 2010
+                                }
                         }
                 },
 
                 series: [{
-                        name: 'Stock',
+                        name: ticker,
                         data: []
                 }],
 
@@ -216,4 +213,7 @@ function reset(){
 $(document).ready(function() {
         reset();
 
+        $("#stock-selections").change(function (){
+            reset();
+        });
 });

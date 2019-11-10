@@ -3,8 +3,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-
-
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
@@ -22,10 +22,11 @@
     </div>
 
     <div class="main_content">
+		<div class="header">Trading Simulation</div>
 		<div class="info">
-			<div>Try your luck and compete against a trading algorithm on this 5 year historical dataset for AAPL stock. When you're ready, press start to begin the simulation and use the BUY and SELL buttons to start trading. You can use the dropdown menus to select different time horizons and different datasets. Your trades will appear on the graph as blue dots and my algorithm's trades will appear as green dots. </div>
+			<div>Simply select the security you want to trade and press start to begin the simulation. Use the BUY and SELL buttons to trade as the simulation runs. This graph is based on about 6 months of real daily historical stock data. After the simulation is complete, check your total profit and enter your name if you want to placed in the leaderboard! Coming soon: compete against my own trading algorithm to see if you can beat the computer!</div>
 		</div>
-      	<%= render :partial => "/trading_strategies/stock_chart", :locals => {:data => @graph_data} %>
+      	<%= render :partial => "/trading_strategies/stock_chart" %>
 
 		<div class="info" id="controls">
 			<button class="btn btn-primary" id="start-button" name="button" onclick="runSim()">
@@ -41,15 +42,18 @@
 				SELL
 			</button>
 			<select id="stock-selections">
-				<option value="volvo">AAPL Stock</option>
-				<option value="saab">INTC Stock</option>
-				<option value="mercedes">MSFT Stock</option>
-				<option value="audi">S&P Index</option>
+				<option value="aapl">AAPL Stock</option>
+				<option value="intc">INTC Stock</option>
+				<option value="msft">MSFT Stock</option>
+				<option value="spy">SPY Index</option>
 			</select>
 		</div>
 
-		<div class="text-bubble">
-			Your Profit: <%= @test_data %>
+		<div class="text-results">
+			Your Realized Profit:
+		</div>
+		<div class="notes">
+			<p><strong>Project Notes:<br></strong> Tools used to build this project: AlphaVantage Stock API, Highcharts Library </p>
 		</div>
 	</div>
 
