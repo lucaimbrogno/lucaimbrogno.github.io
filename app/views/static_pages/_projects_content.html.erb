@@ -1,0 +1,19 @@
+<div class="header">Projects</div>
+<div class="info">
+    <div class="home-text" style="padding-bottom:40px;">
+        Take a look at some of my recent projects. I also included a few UI/UX pieces I designed as well as a showcase of some of my favourite features I built during my internships.
+    </div>
+    <div class="projects-covers">
+        <div class='projects-flex-container'>
+            <% data.each do |project|%>
+                <%= render :partial => "/static_pages/project_box", :locals => {
+                    :source => project[:src],
+                    :skills => project[:skills],
+                    :title => project[:title]
+                } %>
+            <% end %>
+        </div>
+    </div>
+
+    <div></div>
+</div>

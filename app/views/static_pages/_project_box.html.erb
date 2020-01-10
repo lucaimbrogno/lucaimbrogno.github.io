@@ -1,0 +1,21 @@
+<div class='project-box'>
+    <a href="" class="project-cover">
+        <span>
+            View Project
+        </span>
+    </a>
+    <%#= image_tag source, style: 'width:20vw; height:27vh;'  %>
+    <%= image_tag source, style: 'width:275px; height:160px;'  %>
+    <div class="skill-tiles">
+        <% skills.each do |skill| %>
+            <div>
+                <%= skill %>
+            </div>
+        <% end %>
+    </div>
+
+    <div class="title">
+        <%= title %>
+    </div>
+
+</div>

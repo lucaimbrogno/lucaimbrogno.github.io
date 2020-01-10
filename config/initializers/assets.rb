@@ -15,3 +15,5 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 Rails.application.config.assets.precompile += %w(mobile_nav_animations.js)
 Rails.application.config.assets.precompile += %w( trading.js )
+Rails.application.config.assets.precompile += %w( work.css )
+Rails.application.config.assets.precompile += %w( static.js )

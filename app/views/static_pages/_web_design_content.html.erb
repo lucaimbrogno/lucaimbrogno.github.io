@@ -1,0 +1,21 @@
+<div class="header">Web Design Projects</div>
+<div class="info">
+    <div class="home-text">
+        I build clean modern web sites for businesses in any industry. With every new project I take on, I push myself to think outside the box and create something with a unique style.
+    </div>
+
+    <div class="projects-covers">
+        <div class='projects-flex-container'>
+            <% data.each do |design|%>
+                <%= render :partial => "/static_pages/design_box", :locals => {
+                    :source => design[:src],
+                    :title => design[:title],
+                    :desc => design[:desc],
+                    :link => design[:link]
+                } %>
+            <% end %>
+        </div>
+    </div>
+
+    <div></div>
+</div>

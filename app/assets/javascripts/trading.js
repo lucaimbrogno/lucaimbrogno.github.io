@@ -1,6 +1,38 @@
 var stock_chart;
 var stock_sim;
 var cash = 0;
+var shares_owned = 0;
+var time = $("#aapl_time").val().split(" ");
+var price = $("#aapl_price").val().split(" ");
+var ticker = "AAPL";
+
+function findStock() {
+    ticker = $('.stock-ticker').val();
+
+    $.ajax({
+        url: "/stock_game",
+        type: "get",
+        data: {
+            ticker: ticker
+        },
+        success: function (result) {
+            // reset();
+
+            // Create new DOM element to parse result
+            var el = document.createElement( 'html' );
+            el.innerHTML = result;
+            reset();
+
+            time = $("#time", el).val().split(" ");
+            price = $("#price", el).val().split(" ");
+        },
+        error: function (data) {
+            alert("Please enter a valid dick ticker. Ex: 'MSFT'");
+        }
+
+    });
+}
+
 function buy() {
         var buy_flags = stock_chart.series[1];
         var line = stock_chart.series[0];
@@ -11,27 +43,32 @@ function buy() {
 
         buy_flags.addPoint([x,y], true, false, false, false);
         cash = cash - y;
+        shares_owned++;
 }
 
 function sell() {
+    if (shares_owned > 0) {
         var sell_flags = stock_chart.series[2];
         var line = stock_chart.series[0];
         var x_data = line.processedXData;
         var y_data = line.processedYData;
-        var x = x_data[x_data.length-1];
-        var y = y_data[y_data.length-1];
+        var x = x_data[x_data.length - 1];
+        var y = y_data[y_data.length - 1];
 
-        sell_flags.addPoint([x,y], true, false, false, false);
+        sell_flags.addPoint([x, y], true, false, false, false);
         cash = cash + y;
+        shares_owned--;
+    }
 }
 function runSim() {
 
-        equity = $('option:selected').val();
+        equity = $('.stock-ticker').val();
         ticker = equity.toUpperCase();
         title = ticker;
-        time_data = $('#' + equity + '_time').val().split(" ");
+        time_data = time;
         date_string = time_data[0] + ' - ' + time_data[time_data.length-1];
-
+        x_data = time;
+        y_data = price;
         stock_chart = Highcharts.chart('chart', {
                 chart: {
                         type: 'line',
@@ -45,8 +82,8 @@ function runSim() {
                                         var i = 0;
                                         stock_sim = setInterval(function () {
 
-                                          x_data = $('#' + equity + '_time').val().split(" ");
-                                          y_data = $('#' + equity + '_price').val().split(" ");
+                                          x_data = time;
+                                          y_data = price;
                                                 if (i == x_data.length - 1) {
                                                         clearInterval(stock_sim);
                                                         results();
@@ -137,17 +174,17 @@ function runSim() {
 }
 
 function results(){
-        $('.text-bubble').html("Your Profit: $" + cash);
-        $('.text-bubble').css('display','block');
+        cash = cash.toFixed(2);
+        $('.value-results').html("$" + cash);
 }
 
 function reset(){
         //$('.text-bubble').css('display','none');
         clearInterval(stock_sim);
-        equity = $('option:selected').val();
-        ticker = equity.toUpperCase();
-        title = ticker + " Stock";
-        time_data = $('#' + equity + '_time').val().split(" ");
+        equity = ticker
+        upper = equity.toUpperCase();
+        title = upper + " Stock";
+        time_data = time;
         date_string = time_data[0] + ' - ' + time_data[time_data.length-1];
 
         stock_chart = Highcharts.chart('chart', {
@@ -189,7 +226,7 @@ function reset(){
                 },
 
                 series: [{
-                        name: ticker,
+                        name: upper,
                         data: []
                 }],
 
@@ -215,5 +252,8 @@ $(document).ready(function() {
 
         $("#stock-selections").change(function (){
             reset();
+        });
+        $('.stock-ticker').on('submit', function () {
+            findStock();
         });
 });

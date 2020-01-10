@@ -1,48 +1,51 @@
 class TradingStrategiesController < ApplicationController
     def stock_game
+        require "alphavantagerb"
+        client = Alphavantage::Client.new key: "W8GKJXKKDF5K3SR5"
+
+        # User AAPL data as default and use @time and @price for new stock requests
         @aapl_data = {
             :time => [],
             :price => []
         }
-        @intc_data = {
-            :time => [],
-            :price => []
-        }
-        @msft_data = {
-            :time => [],
-            :price => []
-        }
-        @spy_data = {
-            :time => [],
-            :price => []
-        }
 
-        @aapl_data[:time], @aapl_data[:price] = get_stock_data "AAPL"
-        @intc_data[:time], @intc_data[:price] = get_stock_data "INTC"
-        @msft_data[:time], @msft_data[:price] = get_stock_data "MSFT"
-        @spy_data[:time], @spy_data[:price] = get_stock_data "SPY"
+        # Determine if we are reloading page back to default or loading up a new stock request
+        if params[:ticker] != nil
+            @time = []
+            @price = []
+            stock = client.stock symbol: params[:ticker]
+            ts = stock.timeseries
+            stock_data = ts.open
 
-    end
+            time = []
+            price = []
+            stock_data.each do |couple|
+                time << couple[0]
+                price << couple[1]
+            end
 
-    def get_stock_data ticker
-        require "alphavantagerb"
-        client = Alphavantage::Client.new key: "W8GKJXKKDF5K3SR5"
-        stock = client.stock symbol: ticker
-        ts = stock.timeseries
-        stock_data = ts.open
+            # reverse both lists since they go backwards in time
+            @time = time.reverse
+            @price = price.reverse
+        else
+            stock = client.stock symbol: "AAPL"
+            ts = stock.timeseries
+            stock_data = ts.open
 
-        time = []
-        price = []
-        stock_data.each do |couple|
-            time << couple[0]
-            price << couple[1]
+            time = []
+            price = []
+            stock_data.each do |couple|
+                time << couple[0]
+                price << couple[1]
+            end
+
+            @aapl_data[:time] = time.reverse
+            @aapl_data[:price] = price.reverse
         end
 
-        # reverse both lists since thy go backwards in time
-        time = time.reverse
-        price = price.reverse
-
-        return time, price
     end
 
+    def equity_spotlight
+
+    end
 end

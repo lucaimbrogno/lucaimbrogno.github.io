@@ -1,0 +1,147 @@
+
+
+.projects-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin:auto;
+    justify-content: center;
+}
+
+.project-box {
+    width:275px;
+    margin:25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: -6px -6px 15px 0 rgba(255, 255, 255, 1), 3px 3px 20px 0 rgba(0, 0, 0, 0.288);
+    position:relative;
+}
+
+.skill-tiles {
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.skill-tiles > div {
+    display: inline-block;
+    padding: 0 8px;
+    margin: 5px 0 5px 5px;
+    border-radius: 3px;
+    background:white;
+    font-size: 2vh;
+    line-height: 3.5vh;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    margin:8px !important;
+}
+
+.project-cover {
+    height:160px;
+    width:100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index:2;
+    position:absolute;
+    padding-top:22%;
+    text-align: center;
+    color:white;
+    font-size: 3.5vh;
+    line-height:4vh;
+    text-shadow: 2px 2px rgba(0,0,0,0.75);
+    display:none;
+}
+
+.project-cover > span {
+    padding: 4px 0;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    font-family: 'Nanum Myeongjo', serif;
+    color:white;
+}
+
+.project-box:hover > .project-cover {
+    display:inline-block;
+    text-decoration: none;
+}
+
+
+
+/*.project-box:hover > .project-cover > span {*/
+/*    transform: scale(25);*/
+/*    transition-duration: 0.3s;*/
+/*}*/
+
+.design-cover {
+    height:0;
+    width:100%;
+    background: transparent;
+    z-index:2;
+    position:absolute;
+    padding:25px;
+    text-align: center;
+}
+
+.title-cover {
+    height:42%;
+    width:100%;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.25), rgba(0,0,0,1));
+    color:white;
+    text-shadow: black;
+    z-index:2;
+    position:absolute;
+    bottom:-20px;
+    padding:10px;
+    text-align: left;
+    font-size:3vh;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.title-cover > span {
+    position:absolute;
+    bottom:10px;
+}
+
+.design-box {
+    width:25vw;
+    margin:20px 50px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: -8px -8px 10px 0 rgba(255, 255, 255, 1), 3px 3px 20px 0 rgba(0, 0, 0, 0.288);
+    position:relative;
+}
+
+.design-cover > h4 {
+    font-size: 0;
+}
+.design-cover > a {
+    display:none;
+}
+
+.design-cover > p {
+    font-size:0;
+    line-height: 130%;
+    color: #DEF2F1;
+}
+
+.design-box:hover .design-cover {
+    border-radius: 10px;
+    background: rgba(23, 37, 42, 1);
+    height:100%;
+    transition-duration: 0.3s;
+}
+
+.design-box:hover .design-cover > p {
+    font-size:2vh;
+    transition-duration: 0.4s;
+}
+
+.design-box:hover .design-cover > a {
+    display:inline-block;
+    transition-duration: 0.4s;
+}
+
+.design-box:hover .title-cover {
+    display: none;
+}

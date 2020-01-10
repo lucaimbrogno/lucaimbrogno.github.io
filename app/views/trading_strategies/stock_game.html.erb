@@ -24,34 +24,41 @@
     <div class="main_content">
 		<div class="header">Trading Simulation</div>
 		<div class="info">
-			<div>Simply select the security you want to trade and press start to begin the simulation. Use the BUY and SELL buttons to trade as the simulation runs. This graph is based on about 6 months of real daily historical stock data. After the simulation is complete, check your total profit and enter your name if you want to placed in the leaderboard! Coming soon: compete against my own trading algorithm to see if you can beat the computer!</div>
+			<div>Simply select the security you want to trade and press start to begin the simulation. Use the BUY and SELL buttons to trade one share at a time as the simulation runs. This graph is roughly the last 5 months of daily historical stock data from AlphaVantage. After the simulation is complete, check your total realized profit below. Coming soon: compete against my own trading algorithm to see if you can beat the computer!</div>
 		</div>
       	<%= render :partial => "/trading_strategies/stock_chart" %>
 
-		<div class="info" id="controls">
-			<button class="btn btn-primary" id="start-button" name="button" onclick="runSim()">
-				Start
-			</button>
-			<button class="btn btn-primary" id="reset-button" name="button" onclick="reset()">
-				Reset
-			</button>
-			<button class="btn btn-primary" id="buy-button" name="button" onClick="buy()">
-				 BUY
-			</button>
-			<button class="btn btn-primary" id="sell-button" name="button" onClick="sell()">
-				SELL
-			</button>
-			<select id="stock-selections">
-				<option value="aapl">AAPL Stock</option>
-				<option value="intc">INTC Stock</option>
-				<option value="msft">MSFT Stock</option>
-				<option value="spy">SPY Index</option>
-			</select>
-		</div>
+        <div class="stock-game-container">
+            <div  id="stock-selections">
+                Enter Ticker:<br>
+                <input type="text" class="stock-ticker">
+                <br><br>
+                <button class="btn btn-primary" onclick="findStock()">Find Stock</button>
+            </div>
 
-		<div class="text-results">
-			Your Realized Profit:
-		</div>
+            <div class="info" id="controls">
+                <button class="btn btn-primary" id="start-button" name="button" onclick="runSim()">
+                    Start
+                </button>
+                <button class="btn btn-primary" id="reset-button" name="button" onclick="reset()">
+                    Reset
+                </button>
+                <button class="btn btn-primary" id="buy-button" name="button" onClick="buy()">
+                     BUY
+                </button>
+                <button class="btn btn-primary" id="sell-button" name="button" onClick="sell()">
+                    SELL
+                </button>
+            </div>
+            <div>
+                <div class="text-results">
+                    Your Realized Profit <br>
+                </div>
+                <div class="value-results">
+
+                </div>
+            </div>
+        </div>
 		<div class="notes">
 			<p><strong>Project Notes:<br></strong> Tools used to build this project: AlphaVantage Stock API, Highcharts Library </p>
 		</div>
