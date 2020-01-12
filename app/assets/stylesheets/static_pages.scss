@@ -26,7 +26,7 @@ body {
 .wrapper {
     display: flex;
     position: relative;
-    padding: 40px 10vw 80px 10vw;
+    padding: 40px 8vw 80px 8vw;
 }
 
 //hide mobile nav icons
@@ -54,7 +54,7 @@ body {
     width: 160px;
     height: 100%;
     background: inherit;
-    padding: 30px 0px;
+    padding-bottom:10px;
     position: absolute;
     animation: sidebarAnimation 0.5s forwards 0s linear;
 }
@@ -67,17 +67,16 @@ body {
 }
 
 .wrapper .sidebar ul li {
-    padding: 15px;
-    border-bottom: 1px solid #bdb8d7;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(54, 89, 101, 0.5);
+    border-top: 1px solid rgba(54, 89, 101, 0.5);
 
 }
 
 .wrapper .sidebar ul li a {
     color: #DEF2F1;
     display: block;
-    text-align: right;
+    text-align: left;
 }
 
 .wrapper .sidebar ul li a .fas {
@@ -85,12 +84,10 @@ body {
 }
 
 .wrapper .sidebar ul li:hover {
-    background-color: #CDF4F1;
+    background-color: rgba(54, 89, 101, 1);
 }
 
-.wrapper .sidebar ul li:hover a {
-    color: #17252a;
-}
+
 
 .wrapper .sidebar .social_media {
     position: relative;
@@ -104,7 +101,7 @@ body {
 .wrapper .sidebar .social_media a {
     display: block;
     width: 40px;
-    background: #CDF4F1;
+    background-color: rgba(54, 89, 101, 1);
     height: 40px;
     line-height: 45px;
     text-align: center;
@@ -125,16 +122,17 @@ body {
     background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, #FEFFFF 0%, rgba(219, 255, 253, 1) 63%, rgba(127, 255, 248, 1) 100%);
     border-left: 4px solid black;
     opacity: 90%;
+    position:relative;
 }
 
 .wrapper .main_content .header {
-    padding: 20px 20px 5px 20px;
+    padding: 10px 20px 0px 20px;
     background: white;
     color: #17252a;
     border-bottom: 1px solid #e0e4e8;
     font-size: 200%;
     font-weight: bold;
-    margin-top: 10px;
+
 }
 
 .wrapper .main_content .info {
@@ -196,6 +194,48 @@ body {
     margin-bottom: 30px;
 }
 
+/* === AR App === */
+
+.ar-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ar-container > div {
+    text-align: center;
+}
+
+.ar-pic {
+    width:60%;
+    margin:40px 10px;
+    box-shadow: -12px -12px 10px 0 rgba(255, 255, 255, 1), 12px 12px 25px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+}
+.ar-text {
+    font-size: 1.75vw;
+    line-height:2.25vw;
+    width:100%;
+    margin:30px;
+}
+
+.back {
+    margin:0px 40px 5px 40px;
+    padding:8px;
+    background: #2196F3;
+    border-radius: 5px;
+    font-size: 15px;
+    color:white !important;
+    font-weight: lighter;
+    position:absolute;
+    top:75px;
+    left:-16px;
+}
+
+.back:hover {
+    text-decoration: none;
+    background: #2196C3;
+}
 //mobile optimization
 
 @media (max-width: 767px) {

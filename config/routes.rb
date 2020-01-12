@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   get "equity_spotlight" => "trading_strategies#equity_spotlight"
 
+  get "arapp" => "static_pages#arapp"
+
 end

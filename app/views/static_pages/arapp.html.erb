@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <%= stylesheet_link_tag "work.css" %>
+
+    <%= javascript_include_tag "static.js"  %>
+    <%= javascript_include_tag "mobile_nav_animations.js"  %>
+    <title>Luca Imbrogno - Projects</title>
+</head>
+<body>
+<a href="#" onclick="openSideMenu()">
+    <i class="fas fa-bars" id="open-nav-icon"></i>
+</a>
+<h1 id="main-title">LUCA IMBROGNO</h1>
+<div class="wrapper">
+
+    <div class="sidebar">
+        <%= render :partial => "/utilities/header" %>
+    </div>
+
+    <div class="main_content">
+        <div class="header">
+            AR App
+        </div>
+        <a href="/projects" class="back">
+            <i class="fas fa-angle-left"></i>  Back To Projects
+        </a>
+        <div class="info">
+            <div class="ar-container">
+                <div class="ar-pic">
+                    <%= image_tag "arapp.png", style: 'width:100%;border-radius:4px'  %>
+                </div>
+                <div class="ar-text">
+                    I think Augmented Reality is one of the coolest technologies in today's day and age! There is definitely a long way to go with this technology but I believe it will play a huge role in our future. This project was my first attempt at making an AR app. I used a book cover as an image target so whenever the AR camera sees the book cover it will place a platform and a little space-man on top of it. It also has a virtual button that makes the space man run when pressed!
+                </div>
+            </div>
+        </div>
+
+        <div class="notes">
+            <p><strong>Project Notes:<br></strong> Tools used to build this project:  Unity, Vuforia SDK, Android Studio, C# </p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

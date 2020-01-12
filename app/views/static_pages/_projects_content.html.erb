@@ -9,7 +9,8 @@
                 <%= render :partial => "/static_pages/project_box", :locals => {
                     :source => project[:src],
                     :skills => project[:skills],
-                    :title => project[:title]
+                    :title => project[:title],
+                    :path => project[:path]
                 } %>
             <% end %>
         </div>

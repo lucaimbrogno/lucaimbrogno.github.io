@@ -13,27 +13,32 @@ class StaticPagesController < ApplicationController
                 {
                     :src => 'stock_game.PNG',
                     :skills => ['HTML', 'CSS', 'JS'],
-                    :title => 'Trading Simulation'
+                    :title => 'Trading Simulation',
+                    :path => '/stock_game'
                 },
                 {
                     :src => 'arapp.png',
                     :skills => ['Unity', 'C#'],
-                    :title => 'Marker Based AR App'
+                    :title => 'Marker Based AR App',
+                    :path => '/arapp'
                 },
                 {
                     :src => 'stock_game.PNG',
                     :skills => ['HTML', 'CSS', 'JS'],
-                    :title => 'Instagram Story Grouping'
+                    :title => 'Instagram Story Grouping',
+                    :path => ''
                 },
                 {
-                    :src => 'stock_game.PNG',
-                    :skills => ['HTML', 'CSS', 'JS'],
-                    :title => 'zzzzzzzzzzzzzzzzzzzzzzz'
+                    :src => 'database.png',
+                    :skills => ['SQL', 'HeidiSQL'],
+                    :title => 'Quidditch Database',
+                    :path => ''
                 },
                 {
-                    :src => 'stock_game.PNG',
-                    :skills => ['HTML', 'CSS', 'JS'],
-                    :title => 'zzzzzzzzzzzzzzzzzzzzzzz'
+                    :src => 'amazon.PNG',
+                    :skills => ['Python'],
+                    :title => 'Amazon Price Tracker',
+                    :path => ''
                 }
 
             ]
@@ -59,5 +64,9 @@ class StaticPagesController < ApplicationController
                 }
             ]
         }
+    end
+
+    def arapp
+
     end
 end
