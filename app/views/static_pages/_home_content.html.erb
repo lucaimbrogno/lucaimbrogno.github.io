@@ -1,24 +1,32 @@
 <div class="header">Welcome To My Site!</div>
 <div class="info">
-    <div class="home-text">I am a web developer based in Toronto, Canada. I have spent the last 4 years pursuing a double major in Computer Science and Business while also gaining industry experience through a variety of internships. Check out some of my work below.</div>
+    <div class="home-text">I am a web developer based in Toronto, Canada. I have spent the last 4 years pursuing a double major in Computer Science and Business while also gaining industry experience through a variety of internships. <br></br>I'm currently seeking another software development internship as well as freelance web design and development projects. Check out some of my work below.</div>
 
     <div class="home-visuals">
         <div class="home-flex-container">
             <div class="home-flex-box">
-                <a href="/projects">
-                    <div class="cta-button">
-                        <i class="fas fa-project-diagram icon fa-lg"></i>
-                        Projects
-                    </div>
-                </a>
+                <div>
+                    <%= image_tag "projects.svg", style:'width:60%;'  %><br><br>
+                    Check out some of my recent creations. I mostly build these projects for fun and to keep my skills sharp for my next opportunity.
+                    <a href="/web_design">
+                        <div class="cta-button">
+                            <!--                        <i class="fas fa-project-diagram icon fa-lg"></i>-->
+                            Projects <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
             </div>
             <div class="home-flex-box">
-                <a href="/web_design">
-                    <div class="cta-button">
-                        <i class="far fa-window-restore icon fa-lg"></i>
-                        Web Design
-                    </div>
-                </a>
+                <div>
+                    <%= image_tag "web_design.svg", style:'width:60%;' %><br><br>
+                    If you're interested in getting a website built, check out some of my recent web design projects
+                    <a class='cta-link' href="/web_design">
+                        <div class="cta-button">
+                            <!--                        <i class="far fa-window-restore icon fa-lg"></i>-->
+                            Web Design <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
 
