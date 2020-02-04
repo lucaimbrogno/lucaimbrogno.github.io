@@ -23,14 +23,14 @@ class StaticPagesController < ApplicationController
                     :path => '/arapp'
                 },
                 {
-                    :src => 'stock_game.PNG',
-                    :skills => ['HTML', 'CSS', 'JS'],
+                    :src => 'stories.PNG',
+                    :skills => ['HTML', 'CSS', 'JS', 'UI Design'],
                     :title => 'Instagram Story Grouping',
-                    :path => ''
+                    :path => '/story_grouping'
                 },
                 {
                     :src => 'database.png',
-                    :skills => ['SQL', 'HeidiSQL'],
+                    :skills => ['SQL', 'MySQL', 'HeidiSQL'],
                     :title => 'Quidditch Database',
                     :path => ''
                 },
@@ -67,6 +67,14 @@ class StaticPagesController < ApplicationController
     end
 
     def arapp
+
+    end
+
+    def story_grouping
+
+    end
+
+    def contact
 
     end
 end

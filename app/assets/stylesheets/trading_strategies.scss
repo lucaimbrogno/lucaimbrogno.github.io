@@ -39,13 +39,16 @@
 
 }
 
+.stock-game-info {
+    margin-top:75px !important;
+}
 .stock-game-container {
     display: flex;
 }
 
 .stock-game-container > div {
     width:33%;
-    box-shadow: -8px -8px 10px 0 rgba(255, 255, 255, 1), 3px 3px 20px 0 rgba(0, 0, 0, 0.288);
+    box-shadow: -8px -8px 10px 0 rgba(255, 255, 255, 0.9), 3px 3px 20px 0 rgba(0, 0, 0, 0.288);
     border-radius: 12px;
     margin:30px;
     padding: 25px;

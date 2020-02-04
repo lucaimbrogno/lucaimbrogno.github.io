@@ -23,8 +23,11 @@
 
     <div class="main_content">
 		<div class="header">Trading Simulation</div>
-		<div class="info">
-			<div>Simply search for the security you want to trade or use the default AAPL data and press start to begin the simulation. Use the BUY and SELL buttons to trade one share at a time as the simulation runs. This graph is roughly the last 5 months of daily historical stock data from AlphaVantage. After the simulation is complete, check your total realized profit below. Coming soon: compete against my own trading algorithm to see if you can beat the computer!</div>
+        <a href="/projects" class="back">
+            <i class="fas fa-angle-left"></i>  Back To Projects
+        </a>
+		<div class="info stock-game-info">
+			<div>Simply enter the stock ticker you want to trade or use the default AAPL data and press start to begin the simulation. Use the BUY and SELL buttons to trade one share at a time as the simulation runs. This graph is roughly the last 5 months of daily historical stock data from AlphaVantage. After the simulation is complete, check your total realized profit below. Coming soon: compete against my own trading algorithm to see if you can beat the computer!</div>
 		</div>
       	<%= render :partial => "/trading_strategies/stock_chart" %>
 

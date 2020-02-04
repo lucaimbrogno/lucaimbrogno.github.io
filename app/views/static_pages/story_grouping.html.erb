@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <%= stylesheet_link_tag "work.css" %>
+
+    <%= javascript_include_tag "static.js"  %>
+    <%= javascript_include_tag "mobile_nav_animations.js"  %>
+    <title>Luca Imbrogno - Projects</title>
+</head>
+<body>
+<a href="#" onclick="openSideMenu()">
+    <i class="fas fa-bars" id="open-nav-icon"></i>
+</a>
+<h1 id="main-title">LUCA IMBROGNO</h1>
+<div class="wrapper">
+
+    <div class="sidebar">
+        <%= render :partial => "/utilities/header" %>
+    </div>
+
+    <div class="main_content">
+        <div class="header">
+            Instagram Story Grouping
+        </div>
+        <a href="/projects" class="back">
+            <i class="fas fa-angle-left"></i>  Back To Projects
+        </a>
+        <div class="info">
+            <div class="story-container">
+                <div class="project-text">
+                    This is one of the features I worked on during my internship at Socialpeeks. Socialpeeks is an Instagram Influencer analyzer and campaign management software. I was working on the reporting side of the product which uses the Facebook API to pull live post and story data from Instagram and consolidates it all into a report. One of the challenges I faced was that Instagram splits up long video stories into 15 second clips which led to a poor user experience in our report. The goal was to stitch the related story clips back together in a more consumable format similar to the way a user consumes stories on Instagram.
+                </div>
+                <div class="story-titles">
+                    <div class="story-before">
+                        Before (4 Separate Videos)
+                    </div>
+                    <div class="story-after">
+                        After (Consumable Instagram Story)
+                    </div>
+                </div>
+                <div class="story-pics">
+                    <%= image_tag "stories.PNG", style: 'width:100%;border-radius:4px'  %>
+                    <i class="fas fa-arrow-right story-arrow fa-4x"></i>
+                    <%= image_tag "grouped_story.png", style: 'width:30%;border-radius:4px'  %>
+                </div>
+
+                <div class="project-text">
+                    Part of this feature involved the actual sorting and grouping of the raw story data from Instagram. To determine which stories were related and belonged in a group we used the timestamp data from Instagram. We decided that any story posted within 1 minute of each other should be considered related and therefor put in a group. You can take a peak at the algorithm I built to do this below.
+                </div>
+                <div>
+                    <%= image_tag "group_algo.PNG", style: 'width:100%;border-radius:4px'  %>
+                </div>
+            </div>
+        </div>
+
+        <div class="notes">
+            <p><strong>Project Notes:<br></strong> One of my favourite parts of this feature is the video progress bars on the grouped stories. I have always been impressed by the clean design of the real Instagram story viewing experience so I used that as inspiration for the design of this feature. <br>Tools used to build this project:  HTML, CSS, JS, Ruby on Rails, Facebook API Data </p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

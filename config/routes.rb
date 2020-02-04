@@ -15,4 +15,6 @@ Rails.application.routes.draw do
 
   get "arapp" => "static_pages#arapp"
 
+  get "story_grouping" => "static_pages#story_grouping"
+
 end
