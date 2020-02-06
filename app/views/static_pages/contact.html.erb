@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <%= stylesheet_link_tag "work.css" %>
+
+    <%= javascript_include_tag "static.js"  %>
+    <%= javascript_include_tag "mobile_nav_animations.js"  %>
+    <title>Luca Imbrogno - Projects</title>
+</head>
+<body>
+<a href="#" onclick="openSideMenu()">
+    <i class="fas fa-bars" id="open-nav-icon"></i>
+</a>
+<h1 id="main-title">LUCA IMBROGNO</h1>
+<div class="wrapper">
+
+    <div class="sidebar">
+        <%= render :partial => "/utilities/header" %>
+    </div>
+
+    <div class="main_content">
+        <div class="header">
+            Contact
+        </div>
+        <div class="info">
+            <div class="project-text">
+                Interested in working together? Shoot me a message and I'd be happy to talk. You can contact me by email or by using the form below.
+            </div>
+
+            <div class="contact-flex">
+                <div class='contact-flex-box contact-form-box'>
+                    <form id='contact-form' action='https://formspree.io/xgekyjbe' method='POST'>
+                        <input name='name' id='contact-name' type='text' class='form-control' placeholder='Your Name' required><br>
+
+                        <input name='email' id='contact-email' type='email' class='form-control' placeholder='Your Email' required><br>
+
+                        <textarea name='message' id='contact-msg' class='form-control' placeholder='Message' rows='8' required></textarea><br>
+
+                        <input type='submit' class='form-control submit' value='Send Message'>
+                    </form>
+                </div>
+                <div class="contact-details">
+                    <div class='contact-method'>
+                        <i class="fa fa-phone fa-fw fa-4x" aria-hidden="true"></i>&nbsp; <span class='contact-text'>905.466.2476</span>
+                    </div>
+                    <div class='contact-method'>
+                        <i class="fa fa-envelope fa-fw fa-4x" aria-hidden="true"></i>&nbsp; <span class='contact-text'>limbrog@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

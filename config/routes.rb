@@ -17,4 +17,6 @@ Rails.application.routes.draw do
 
   get "story_grouping" => "static_pages#story_grouping"
 
+  get "contact" => "static_pages#contact"
+
 end
