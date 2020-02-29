@@ -300,6 +300,20 @@ ar-container > div {
     font-size: larger;
 }
 
+/* === QUIDDITCH START === */
+.project-pic {
+    display: flex;
+    flex-wrap: wrap;
+    padding:30px;
+}
+
+.project-pic> img {
+    width:1000px;
+    margin:30px auto;
+    border-radius:4px;
+    box-shadow: -12px -12px 10px 0 rgba(255, 255, 255, 1), 12px 12px 25px 0 rgba(0, 0, 0, 0.5);
+}
+
 /* === CONTACT START === */
 .contact-flex {
     display: flex;

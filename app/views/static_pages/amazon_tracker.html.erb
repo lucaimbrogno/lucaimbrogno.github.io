@@ -27,7 +27,7 @@
 
     <div class="main_content">
         <div class="header">
-            AR App
+            Amazon Price Tracker
         </div>
         <a href="/projects" class="back">
             <i class="fas fa-angle-left"></i>  Back To Projects
@@ -35,16 +35,16 @@
         <div class="info">
             <div class="ar-container">
                 <div class="ar-pic">
-                    <%= image_tag "arapp.png", style: 'width:100%;border-radius:4px'  %>
+                    <%= image_tag "amazon_2.PNG", style: 'width:100%;border-radius:4px'  %>
                 </div>
                 <div class="project-text">
-                    I think Augmented Reality is one of the coolest technologies in the world today! There is definitely a long way to go with this technology but I believe it will play a huge role in our future. This project was my first attempt at making an AR app. I used a book cover as an image target so whenever the AR camera sees the book cover it will place a platform and a little space-man on top of it. It also has a virtual button that makes the space man run when pressed!
+                    Simple amazon product tracker. I saw a similar project online of a tracker that tracks a single product on amazon and recognizes when that product falls below a certain price so I wanted to expand and build on that idea by making something that can be scaled to track as many products as you wish and an automatic email system that emails you with links to all your desired product pages when your desired price is met. I also implemented it so it can run as a background process and check prices once a day. This could be useful to run as a daemon on a web application
                 </div>
             </div>
         </div>
 
         <div class="notes">
-            <p><strong>Project Notes:<br></strong> Tools used to build this project:  Unity, Vuforia SDK, Android Studio, C# </p>
+            <p><strong>Project Notes:<br></strong> Tools used to build this project:  Python, BeautifulSoup library, Simple Mail Transport Protocol (SMTP) library </p>
         </div>
     </div>
 

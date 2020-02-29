@@ -32,14 +32,15 @@ class StaticPagesController < ApplicationController
                     :src => 'database.png',
                     :skills => ['SQL', 'MySQL', 'HeidiSQL'],
                     :title => 'Quidditch Database',
-                    :path => ''
+                    :path => '/quidditch'
                 },
                 {
                     :src => 'amazon.PNG',
                     :skills => ['Python'],
                     :title => 'Amazon Price Tracker',
-                    :path => ''
-                }
+                    :path => '/amazon_tracker'
+                },
+
 
             ]
         }
@@ -61,6 +62,12 @@ class StaticPagesController < ApplicationController
                     :title => 'Sweet Painting',
                     :desc => 'Static website built for a professional painting business. I downloaded this design as a theme from Styleshout and made my own edits and customizations.',
                     :link => 'https://sweetpainting.ca/'
+                },
+                {
+                    :src => 'rtc.PNG',
+                    :title => 'RTC Construction',
+                    :desc => "New modern commericial construction website I'm currently in the process of building",
+                    :link => 'https://rtcconstruction.ca/'
                 }
             ]
         }
@@ -75,6 +82,14 @@ class StaticPagesController < ApplicationController
     end
 
     def contact
+
+    end
+
+    def quidditch
+
+    end
+
+    def amazon_tracker
 
     end
 end

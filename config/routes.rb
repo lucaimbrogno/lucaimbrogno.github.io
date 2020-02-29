@@ -17,6 +17,10 @@ Rails.application.routes.draw do
 
   get "story_grouping" => "static_pages#story_grouping"
 
+  get "quidditch" => "static_pages#quidditch"
+
   get "contact" => "static_pages#contact"
+
+  get "amazon_tracker" => "static_pages#amazon_tracker"
 
 end
