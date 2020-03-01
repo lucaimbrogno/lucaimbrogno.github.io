@@ -15,6 +15,7 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+//= require leaflet
 
 /**
  * main.js

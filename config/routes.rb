@@ -23,4 +23,6 @@ Rails.application.routes.draw do
 
   get "amazon_tracker" => "static_pages#amazon_tracker"
 
+  get "corona_dashboard" => "corona#corona_dashboard"
+
 end

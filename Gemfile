@@ -9,6 +9,11 @@ gem 'jquery-rails'
 #alphavantage gem
 gem 'alphavantagerb', '~> 1.3', '>= 1.3.2'
 	
+# nokogiri gem (webscrape)
+gem 'nokogiri'
+
+# leaflet map gem
+gem 'leaflet-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
