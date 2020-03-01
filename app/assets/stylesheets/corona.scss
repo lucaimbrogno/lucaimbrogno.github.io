@@ -1,0 +1,37 @@
+// Place all the styles related to the Corona controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.corona-main {
+    display: flex;
+    padding:10px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.corona-main > div {
+    width: 40%;
+    margin:auto;
+    padding:15px;
+    height: 250px;
+    background-color: rgba(127, 255, 248, 0.3);
+    border-radius: 10px;
+    box-shadow: -8px -8px 10px 0 rgba(255, 255, 255, 0.9), 3px 3px 20px 0 rgba(0, 0, 0, 0.288);
+}
+
+
+.corona-stats {
+    margin:5px !important;
+    padding:5px !important;
+}
+
+.scroll {
+    margin:4px, 4px;
+    padding:4px;
+    height: 110px;
+    overflow-x: hidden;
+    overflow-x: auto;
+    text-align:justify;
+}
