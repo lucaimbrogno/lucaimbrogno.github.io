@@ -1,13 +1,3 @@
-function removeCommas(string) {
-    let new_string = "";
-    for (let i=0; i < string.length; i++) {
-        if (string[i] != ",") {
-            new_string += string[i]
-        }
-    }
-}
-
-
 $( document ).ready(function() {
     // var mymap = L.map('corona-map').setView([51.505, -0.09], 8);
     //
