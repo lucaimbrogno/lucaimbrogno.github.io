@@ -7,12 +7,14 @@
 .corona-main {
     display: flex;
     padding:10px;
-    margin-top: 60px;
+    margin-top: 100px;
     text-align: center;
+    margin-bottom: 100px;
+    flex-wrap: wrap;
 }
 
 .corona-main > div {
-    width: 40%;
+    width: 45%;
     margin:auto;
     padding:15px;
     height: 250px;
@@ -21,17 +23,85 @@
     box-shadow: -8px -8px 10px 0 rgba(255, 255, 255, 0.9), 3px 3px 20px 0 rgba(0, 0, 0, 0.288);
 }
 
+#overall-stats {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+#overall-stats > div {
+    width: 50%;
+    height: 50%;
+}
 
 .corona-stats {
     margin:5px !important;
     padding:5px !important;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 32px;
+    text-shadow: 3.5px 3.5px rgba(211,211,211, 0.75);
 }
 
+.corona-text-results {
+    font-size: 12px;
+    font-color: grey;
+    letter-spacing: 2px;
+}
 .scroll {
-    margin:4px, 4px;
+    margin:4px;
     padding:4px;
-    height: 110px;
+    height: 185px;
     overflow-x: hidden;
     overflow-x: auto;
     text-align:justify;
+}
+
+.country-list {
+    margin:5px !important;
+    padding:5px !important;
+}
+
+#corona-map {
+    height: 180px;
+}
+
+.corona-cta {
+    text-align: center;
+    display: block;
+}
+
+.corona-cta > div {
+    display: block;
+    margin:15px;
+}
+
+.corona-button {
+    padding:15px;
+    border-radius: 5px;
+    background-color: #3aafa9;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.corona-button:hover {
+    text-decoration: none;
+    background: #2196C3;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .corona-main {
+        display: flex;
+        padding:60px;
+        margin-top: 20px;
+    }
+
+    .corona-main > div {
+        width: 100%;
+        margin: 40px 0px;
+
+    }
+
+    .back {
+        margin-top: 80px !important;
+    }
 }

@@ -17,6 +17,12 @@ class StaticPagesController < ApplicationController
                     :path => '/stock_game'
                 },
                 {
+                    :src => 'corona.jpg',
+                    :skills => ['Rails', 'Nokogiri'],
+                    :title => 'Coronavirus Outbreak',
+                    :path => '/corona_dashboard'
+                },
+                {
                     :src => 'arapp.png',
                     :skills => ['Unity', 'C#'],
                     :title => 'Marker Based AR App',

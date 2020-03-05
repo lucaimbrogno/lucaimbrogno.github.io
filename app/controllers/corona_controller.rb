@@ -12,9 +12,9 @@ class CoronaController < ApplicationController
         # rate = entries.css('table')[0].css('tr')[1].css('td')[1].text
 
         @corona_stats = {
-            overall_count: totals[0].text,
-            deaths: totals[1].text,
-            recovered: totals[2].text,
+            overall_count: totals[0].text.tr(',',''),
+            deaths: totals[1].text.tr(',',''),
+            recovered: totals[2].text.tr(',',''),
             country_count: country_table_entries.length
         }
 
@@ -41,4 +41,6 @@ class CoronaController < ApplicationController
     def string? string
         return string =~ /[^\d.,]/
     end
+
+
 end
