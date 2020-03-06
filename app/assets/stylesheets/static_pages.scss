@@ -29,6 +29,10 @@ body {
     padding: 40px 8vw 80px 8vw;
 }
 
+.mobile-nav {
+    display: none;
+}
+
 //hide mobile nav icons
 #open-nav-icon {
     display: none;
@@ -321,6 +325,7 @@ ar-container > div {
 /* === CONTACT START === */
 .contact-flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .contact-details {
@@ -411,6 +416,31 @@ ar-container > div {
         display:block;
     }
 
+    #main-title {
+        padding: 20px 0 0 0;
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .mobile-nav {
+        display: inline-block;
+        color: #DEF2F1;
+    }
+
+    .mobile-nav > a {
+        color: #DEF2F1;
+        text-decoration: none;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .mobile-nav-container {
+        text-align: center;
+        display: block;
+        margin:12px 0px;
+    }
+
+
     .home-text {
         font-size: 18px;
         line-height: 4vh;
@@ -439,20 +469,32 @@ ar-container > div {
 
     }
 
-    //render open and close icons on mobile
-    #open-nav-icon {
-        display: block;
-        margin-top: 53px;
-        margin-left: 40px;
-        position: absolute;
+    .back {
+        top:0;
+    }
 
+    .project-text {
+        font-size: 18px;
+        line-height: 20px;
+        width:100%;
+        margin:0px;
+        text-align: center;
     }
-    #close-nav-icon {
-        display: block;
+
+    .contact-details {
+        margin-top:20px;
+        border:none;
+        padding:0;
     }
+
 
     .contact-flex-box {
         width:100%;
-
     }
+
+    #contact-form {
+        padding: 0px;
+    }
+
+
 }
