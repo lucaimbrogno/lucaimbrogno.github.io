@@ -3,18 +3,18 @@ class CoronaController < ApplicationController
         require 'openssl'
         doc = Nokogiri::HTML(open('https://www.worldometers.info/coronavirus/#countries', ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE))
 
-        totals = doc.css('.maincounter-number')
+        totals = doc.css('#maincounter-wrap')
 
-        country_table = doc.css('#main_table_countries')
+        country_table = doc.css('.main_table_countries_div')
 
         country_table_entries = country_table.css('tbody')[0].css('tr')
 
         # rate = entries.css('table')[0].css('tr')[1].css('td')[1].text
 
         @corona_stats = {
-            overall_count: totals[0].text.tr(',',''),
-            deaths: totals[1].text.tr(',',''),
-            recovered: totals[2].text.tr(',',''),
+            overall_count: totals[0].text.split(' ')[2].tr(',',''),
+            deaths: totals[1].text.split(' ')[1].tr(',',''),
+            recovered: totals[2].text.split(' ')[1].tr(',',''),
             country_count: country_table_entries.length
         }
 
