@@ -5,7 +5,7 @@ class CoronaController < ApplicationController
 
         totals = doc.css('#maincounter-wrap')
 
-        country_table = doc.css('.main_table_countries_div')
+        country_table = doc.css('#main_table_countries_today')
 
         country_table_entries = country_table.css('tbody')[0].css('tr')
 
@@ -21,6 +21,8 @@ class CoronaController < ApplicationController
         @countries = {}
 
         country_table_entries.each do |country|
+            next unless country.attributes["data-continent"].nil? and country.attributes['class'].nil?
+
             country_info = country.text.split(' ')
             string_part_1 = country_info[0]
             string_part_2 = ""

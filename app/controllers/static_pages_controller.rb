@@ -67,13 +67,13 @@ class StaticPagesController < ApplicationController
                     :src => 'painting.png',
                     :title => 'Sweet Painting',
                     :desc => 'Static website built for a professional painting business. I downloaded this design as a theme from Styleshout and made my own edits and customizations.',
-                    :link => 'https://sweetpainting.ca/'
+                    :link => 'http://sweetpainting.com/'
                 },
                 {
                     :src => 'rtc.PNG',
                     :title => 'RTC Construction',
                     :desc => "New modern commericial construction website I'm currently in the process of building",
-                    :link => 'https://rtcconstruction.ca/'
+                    :link => 'http://rtcconstruction.ca/'
                 }
             ]
         }
