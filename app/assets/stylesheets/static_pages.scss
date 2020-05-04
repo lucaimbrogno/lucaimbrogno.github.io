@@ -26,21 +26,14 @@ body {
 .wrapper {
     display: flex;
     position: relative;
-    padding: 40px 8vw 80px 8vw;
+    padding: 40px 7vw 80px 7vw;
 }
 
 .mobile-nav {
     display: none;
 }
 
-//hide mobile nav icons
-#open-nav-icon {
-    display: none;
-}
 
-#close-nav-icon {
-    display: none;
-}
 
 @keyframes sidebarAnimation {
     0% {
@@ -55,7 +48,7 @@ body {
 
 
 .wrapper .sidebar {
-    width: 160px;
+    width: 210px;
     height: 100%;
     background: inherit;
     padding-bottom:10px;
@@ -70,25 +63,48 @@ body {
     margin-bottom: 30px;
 }
 
-.wrapper .sidebar ul li {
-    padding: 10px 15px;
+.nav-item {
+    padding-top: 16px;
+    padding-right: 4px;
+    margin-bottom:8px;
     border-bottom: 1px solid rgba(54, 89, 101, 0.5);
-    border-top: 1px solid rgba(54, 89, 101, 0.5);
+    //border-top: 1px solid rgba(54, 89, 101, 0.5);
 
 }
 
-.wrapper .sidebar ul li a {
+.nav-item div {
+    color: #3aafa9;
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+
+.sub-nav-item {
+    padding-top: 6px;
+    padding-left: 12px;
+
+}
+
+.sub-nav-item a {
     color: #DEF2F1;
     display: block;
     text-align: left;
 }
 
-.wrapper .sidebar ul li a .fas {
+.nav-item a .fas {
     width: 25px;
 }
 
-.wrapper .sidebar ul li:hover {
+.sub-nav-item:hover {
+
     background-color: rgba(54, 89, 101, 1);
+}
+
+.sub-nav-item a:hover {
+    text-decoration: none;
+    color: #DEF2F1;
 }
 
 
@@ -99,29 +115,29 @@ body {
     left: 50%;
     transform: translateX(-50%);
     display: flex;
-    padding-bottom: px;
+
 }
 
 .wrapper .sidebar .social_media a {
     display: block;
-    width: 40px;
+    width: 55px;
     background-color: rgba(54, 89, 101, 1);
-    height: 40px;
+    height: 45px;
     line-height: 45px;
     text-align: center;
-    margin: 0 5px;
+    margin-right: 12px;
     color: #3aafa9;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
 .wrapper .sidebar .social_media a:hover {
-    color: #17252a;
+    background-color: #17252a;
 }
 
 .wrapper .main_content {
     width: 100%;
-    margin-left: 160px;
+    margin-left: 210px;
     background: rgb(2, 0, 36);
     background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, #FEFFFF 0%, rgba(219, 255, 253, 1) 63%, rgba(127, 255, 248, 1) 100%);
     border-left: 4px solid black;
