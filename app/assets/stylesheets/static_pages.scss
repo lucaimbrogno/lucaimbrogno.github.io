@@ -48,7 +48,7 @@ body {
 
 
 .wrapper .sidebar {
-    width: 210px;
+    width: 200px;
     height: 100%;
     background: inherit;
     padding-bottom:10px;
@@ -67,7 +67,7 @@ body {
     padding-top: 16px;
     padding-right: 4px;
     margin-bottom:8px;
-    border-bottom: 1px solid rgba(54, 89, 101, 0.5);
+    border-bottom: 1px solid rgba(54, 89, 101, 075);
     //border-top: 1px solid rgba(54, 89, 101, 0.5);
 
 }
@@ -76,8 +76,9 @@ body {
     color: #3aafa9;
     display: block;
     text-align: left;
-    font-weight: bold;
+    font-weight: bolder;
     letter-spacing: 2px;
+    font-size: small;
 
 }
 
@@ -137,7 +138,7 @@ body {
 
 .wrapper .main_content {
     width: 100%;
-    margin-left: 210px;
+    margin-left: 200px;
     background: rgb(2, 0, 36);
     background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, #FEFFFF 0%, rgba(219, 255, 253, 1) 63%, rgba(127, 255, 248, 1) 100%);
     border-left: 4px solid black;
