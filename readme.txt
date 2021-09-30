@@ -1,1 +1,1 @@
-Repo for painting business website
+Currently using this page as storage for nft art test
