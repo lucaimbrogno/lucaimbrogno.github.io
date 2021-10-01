@@ -1,10 +1,10 @@
 {
-  "dna": "4b25c7987b1ef80ef87350d054aec980b7fbc03c",
+  "dna": "1befaa4f84b49e60d580976531b4148be72628d9",
   "name": "#2",
-  "description": "This is the description of your NFT project, remember to replace this",
-  "image": "ipfs://NewUriToReplace/2.png",
+  "description": "This is a test NFT collection using generated art from https://github.com/HashLips/hashlips_art_engine ",
+  "image": "https://lucaimbrogno.github.io/metadata/2.png",
   "edition": 2,
-  "date": 1633033810164,
+  "date": 1633047580227,
   "attributes": [
     {
       "trait_type": "Background",
@@ -12,7 +12,7 @@
     },
     {
       "trait_type": "Eyeball",
-      "value": "Red"
+      "value": "White"
     },
     {
       "trait_type": "Eye color",

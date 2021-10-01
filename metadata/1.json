@@ -1,10 +1,10 @@
 {
-  "dna": "2c945f3122cac8ef9af2d9f9f4df750f1b1fcfaf",
+  "dna": "e9e3eefa198def4c02bb31cac6c652c7e3220f16",
   "name": "#1",
-  "description": "This is the description of your NFT project, remember to replace this",
-  "image": "ipfs://NewUriToReplace/1.png",
+  "description": "This is a test NFT collection using generated art from https://github.com/HashLips/hashlips_art_engine ",
+  "image": "https://lucaimbrogno.github.io/metadata/1.png",
   "edition": 1,
-  "date": 1633033809827,
+  "date": 1633047579915,
   "attributes": [
     {
       "trait_type": "Background",
@@ -28,11 +28,11 @@
     },
     {
       "trait_type": "Bottom lid",
-      "value": "Middle"
+      "value": "Low"
     },
     {
       "trait_type": "Top lid",
-      "value": "High"
+      "value": "Low"
     }
   ],
   "compiler": "HashLips Art Engine"

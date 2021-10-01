@@ -1,11 +1,11 @@
 [
   {
-    "dna": "2c945f3122cac8ef9af2d9f9f4df750f1b1fcfaf",
+    "dna": "e9e3eefa198def4c02bb31cac6c652c7e3220f16",
     "name": "#1",
-    "description": "This is the description of your NFT project, remember to replace this",
-    "image": "ipfs://NewUriToReplace/1.png",
+    "description": "This is a test NFT collection using generated art from https://github.com/HashLips/hashlips_art_engine ",
+    "image": "https://lucaimbrogno.github.io/metadata/1.png",
     "edition": 1,
-    "date": 1633033809827,
+    "date": 1633047579915,
     "attributes": [
       {
         "trait_type": "Background",
@@ -29,178 +29,22 @@
       },
       {
         "trait_type": "Bottom lid",
-        "value": "Middle"
+        "value": "Low"
       },
       {
         "trait_type": "Top lid",
-        "value": "High"
+        "value": "Low"
       }
     ],
     "compiler": "HashLips Art Engine"
   },
   {
-    "dna": "4b25c7987b1ef80ef87350d054aec980b7fbc03c",
+    "dna": "1befaa4f84b49e60d580976531b4148be72628d9",
     "name": "#2",
-    "description": "This is the description of your NFT project, remember to replace this",
-    "image": "ipfs://NewUriToReplace/2.png",
+    "description": "This is a test NFT collection using generated art from https://github.com/HashLips/hashlips_art_engine ",
+    "image": "https://lucaimbrogno.github.io/metadata/2.png",
     "edition": 2,
-    "date": 1633033810164,
-    "attributes": [
-      {
-        "trait_type": "Background",
-        "value": "Black"
-      },
-      {
-        "trait_type": "Eyeball",
-        "value": "Red"
-      },
-      {
-        "trait_type": "Eye color",
-        "value": "Yellow"
-      },
-      {
-        "trait_type": "Iris",
-        "value": "Small"
-      },
-      {
-        "trait_type": "Shine",
-        "value": "Shapes"
-      },
-      {
-        "trait_type": "Bottom lid",
-        "value": "Low"
-      },
-      {
-        "trait_type": "Top lid",
-        "value": "Middle"
-      }
-    ],
-    "compiler": "HashLips Art Engine"
-  },
-  {
-    "dna": "1cef05dfc69ecac46099de6ad776a4cb3a4923a0",
-    "name": "#3",
-    "description": "This is the description of your NFT project, remember to replace this",
-    "image": "ipfs://NewUriToReplace/3.png",
-    "edition": 3,
-    "date": 1633033810585,
-    "attributes": [
-      {
-        "trait_type": "Background",
-        "value": "Black"
-      },
-      {
-        "trait_type": "Eyeball",
-        "value": "Red"
-      },
-      {
-        "trait_type": "Eye color",
-        "value": "Yellow"
-      },
-      {
-        "trait_type": "Iris",
-        "value": "Small"
-      },
-      {
-        "trait_type": "Shine",
-        "value": "Shapes"
-      },
-      {
-        "trait_type": "Bottom lid",
-        "value": "High"
-      },
-      {
-        "trait_type": "Top lid",
-        "value": "Middle"
-      }
-    ],
-    "compiler": "HashLips Art Engine"
-  },
-  {
-    "dna": "23880a3e09308b14a5a2641fa5a1c8d32eef86a4",
-    "name": "#4",
-    "description": "This is the description of your NFT project, remember to replace this",
-    "image": "ipfs://NewUriToReplace/4.png",
-    "edition": 4,
-    "date": 1633033811021,
-    "attributes": [
-      {
-        "trait_type": "Background",
-        "value": "Black"
-      },
-      {
-        "trait_type": "Eyeball",
-        "value": "Red"
-      },
-      {
-        "trait_type": "Eye color",
-        "value": "Yellow"
-      },
-      {
-        "trait_type": "Iris",
-        "value": "Small"
-      },
-      {
-        "trait_type": "Shine",
-        "value": "Shapes"
-      },
-      {
-        "trait_type": "Bottom lid",
-        "value": "Low"
-      },
-      {
-        "trait_type": "Top lid",
-        "value": "High"
-      }
-    ],
-    "compiler": "HashLips Art Engine"
-  },
-  {
-    "dna": "699a98ac19efea636fd2389b3e88b9af04da4d6e",
-    "name": "#5",
-    "description": "This is the description of your NFT project, remember to replace this",
-    "image": "ipfs://NewUriToReplace/5.png",
-    "edition": 5,
-    "date": 1633033811563,
-    "attributes": [
-      {
-        "trait_type": "Background",
-        "value": "Black"
-      },
-      {
-        "trait_type": "Eyeball",
-        "value": "Red"
-      },
-      {
-        "trait_type": "Eye color",
-        "value": "Yellow"
-      },
-      {
-        "trait_type": "Iris",
-        "value": "Small"
-      },
-      {
-        "trait_type": "Shine",
-        "value": "Shapes"
-      },
-      {
-        "trait_type": "Bottom lid",
-        "value": "Middle"
-      },
-      {
-        "trait_type": "Top lid",
-        "value": "Middle"
-      }
-    ],
-    "compiler": "HashLips Art Engine"
-  },
-  {
-    "dna": "09d99691d4ea01638f91b70dc16e311d537e566b",
-    "name": "#6",
-    "description": "This is the description of your NFT project, remember to replace this",
-    "image": "ipfs://NewUriToReplace/6.png",
-    "edition": 6,
-    "date": 1633033811944,
+    "date": 1633047580227,
     "attributes": [
       {
         "trait_type": "Background",
@@ -212,45 +56,6 @@
       },
       {
         "trait_type": "Eye color",
-        "value": "Red"
-      },
-      {
-        "trait_type": "Iris",
-        "value": "Small"
-      },
-      {
-        "trait_type": "Shine",
-        "value": "Shapes"
-      },
-      {
-        "trait_type": "Bottom lid",
-        "value": "High"
-      },
-      {
-        "trait_type": "Top lid",
-        "value": "High"
-      }
-    ],
-    "compiler": "HashLips Art Engine"
-  },
-  {
-    "dna": "6b5ec7dfcf6aedc184308b562eea97cae857c293",
-    "name": "#7",
-    "description": "This is the description of your NFT project, remember to replace this",
-    "image": "ipfs://NewUriToReplace/7.png",
-    "edition": 7,
-    "date": 1633033812501,
-    "attributes": [
-      {
-        "trait_type": "Background",
-        "value": "Black"
-      },
-      {
-        "trait_type": "Eyeball",
-        "value": "Red"
-      },
-      {
-        "trait_type": "Eye color",
         "value": "Yellow"
       },
       {
@@ -263,22 +68,100 @@
       },
       {
         "trait_type": "Bottom lid",
-        "value": "Middle"
+        "value": "Low"
       },
       {
         "trait_type": "Top lid",
-        "value": "High"
+        "value": "Middle"
       }
     ],
     "compiler": "HashLips Art Engine"
   },
   {
-    "dna": "71aa7ca1484e37696c07aa1338a2571562e4253f",
-    "name": "#8",
-    "description": "This is the description of your NFT project, remember to replace this",
-    "image": "ipfs://NewUriToReplace/8.png",
-    "edition": 8,
-    "date": 1633033812867,
+    "dna": "83a919bb0cd29f0b35bacd2b5a4b03980617f80c",
+    "name": "#3",
+    "description": "This is a test NFT collection using generated art from https://github.com/HashLips/hashlips_art_engine ",
+    "image": "https://lucaimbrogno.github.io/metadata/3.png",
+    "edition": 3,
+    "date": 1633047580529,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Black"
+      },
+      {
+        "trait_type": "Eyeball",
+        "value": "Red"
+      },
+      {
+        "trait_type": "Eye color",
+        "value": "Red"
+      },
+      {
+        "trait_type": "Iris",
+        "value": "Small"
+      },
+      {
+        "trait_type": "Shine",
+        "value": "Shapes"
+      },
+      {
+        "trait_type": "Bottom lid",
+        "value": "Low"
+      },
+      {
+        "trait_type": "Top lid",
+        "value": "Low"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  },
+  {
+    "dna": "dcacd333ffa7cf784fdb89e299818981a353b516",
+    "name": "#4",
+    "description": "This is a test NFT collection using generated art from https://github.com/HashLips/hashlips_art_engine ",
+    "image": "https://lucaimbrogno.github.io/metadata/4.png",
+    "edition": 4,
+    "date": 1633047580811,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Black"
+      },
+      {
+        "trait_type": "Eyeball",
+        "value": "Red"
+      },
+      {
+        "trait_type": "Eye color",
+        "value": "Pink"
+      },
+      {
+        "trait_type": "Iris",
+        "value": "Medium"
+      },
+      {
+        "trait_type": "Shine",
+        "value": "Shapes"
+      },
+      {
+        "trait_type": "Bottom lid",
+        "value": "Low"
+      },
+      {
+        "trait_type": "Top lid",
+        "value": "Middle"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  },
+  {
+    "dna": "38d2d31f555eb5654507668bbe4578bf079cb469",
+    "name": "#5",
+    "description": "This is a test NFT collection using generated art from https://github.com/HashLips/hashlips_art_engine ",
+    "image": "https://lucaimbrogno.github.io/metadata/5.png",
+    "edition": 5,
+    "date": 1633047581086,
     "attributes": [
       {
         "trait_type": "Background",
@@ -306,18 +189,18 @@
       },
       {
         "trait_type": "Top lid",
-        "value": "Middle"
+        "value": "Low"
       }
     ],
     "compiler": "HashLips Art Engine"
   },
   {
-    "dna": "4446a39868bb379be406e1ec2a79d040194fdde1",
-    "name": "#9",
-    "description": "This is the description of your NFT project, remember to replace this",
-    "image": "ipfs://NewUriToReplace/9.png",
-    "edition": 9,
-    "date": 1633033813265,
+    "dna": "2c945f3122cac8ef9af2d9f9f4df750f1b1fcfaf",
+    "name": "#6",
+    "description": "This is a test NFT collection using generated art from https://github.com/HashLips/hashlips_art_engine ",
+    "image": "https://lucaimbrogno.github.io/metadata/6.png",
+    "edition": 6,
+    "date": 1633047581410,
     "attributes": [
       {
         "trait_type": "Background",
@@ -333,6 +216,123 @@
       },
       {
         "trait_type": "Iris",
+        "value": "Small"
+      },
+      {
+        "trait_type": "Shine",
+        "value": "Shapes"
+      },
+      {
+        "trait_type": "Bottom lid",
+        "value": "Middle"
+      },
+      {
+        "trait_type": "Top lid",
+        "value": "High"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  },
+  {
+    "dna": "e217892eba32462ccaa963b88e875fcab0849e95",
+    "name": "#7",
+    "description": "This is a test NFT collection using generated art from https://github.com/HashLips/hashlips_art_engine ",
+    "image": "https://lucaimbrogno.github.io/metadata/7.png",
+    "edition": 7,
+    "date": 1633047581670,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Black"
+      },
+      {
+        "trait_type": "Eyeball",
+        "value": "Red"
+      },
+      {
+        "trait_type": "Eye color",
+        "value": "Yellow"
+      },
+      {
+        "trait_type": "Iris",
+        "value": "Medium"
+      },
+      {
+        "trait_type": "Shine",
+        "value": "Shapes"
+      },
+      {
+        "trait_type": "Bottom lid",
+        "value": "High"
+      },
+      {
+        "trait_type": "Top lid",
+        "value": "High"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  },
+  {
+    "dna": "e93e01f553811d075f8b480dbd48572ff58b0504",
+    "name": "#8",
+    "description": "This is a test NFT collection using generated art from https://github.com/HashLips/hashlips_art_engine ",
+    "image": "https://lucaimbrogno.github.io/metadata/8.png",
+    "edition": 8,
+    "date": 1633047581926,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Black"
+      },
+      {
+        "trait_type": "Eyeball",
+        "value": "White"
+      },
+      {
+        "trait_type": "Eye color",
+        "value": "Yellow"
+      },
+      {
+        "trait_type": "Iris",
+        "value": "Medium"
+      },
+      {
+        "trait_type": "Shine",
+        "value": "Shapes"
+      },
+      {
+        "trait_type": "Bottom lid",
+        "value": "Middle"
+      },
+      {
+        "trait_type": "Top lid",
+        "value": "Middle"
+      }
+    ],
+    "compiler": "HashLips Art Engine"
+  },
+  {
+    "dna": "9c48eefa96179744ea2c1aebbb301c3a20dc6dd6",
+    "name": "#9",
+    "description": "This is a test NFT collection using generated art from https://github.com/HashLips/hashlips_art_engine ",
+    "image": "https://lucaimbrogno.github.io/metadata/9.png",
+    "edition": 9,
+    "date": 1633047582183,
+    "attributes": [
+      {
+        "trait_type": "Background",
+        "value": "Black"
+      },
+      {
+        "trait_type": "Eyeball",
+        "value": "Red"
+      },
+      {
+        "trait_type": "Eye color",
+        "value": "Red"
+      },
+      {
+        "trait_type": "Iris",
         "value": "Large"
       },
       {
@@ -345,18 +345,18 @@
       },
       {
         "trait_type": "Top lid",
-        "value": "Middle"
+        "value": "High"
       }
     ],
     "compiler": "HashLips Art Engine"
   },
   {
-    "dna": "bc52bbb3405ff84255aaee64788e723ca3b07c9a",
+    "dna": "6b5ec7dfcf6aedc184308b562eea97cae857c293",
     "name": "#10",
-    "description": "This is the description of your NFT project, remember to replace this",
-    "image": "ipfs://NewUriToReplace/10.png",
+    "description": "This is a test NFT collection using generated art from https://github.com/HashLips/hashlips_art_engine ",
+    "image": "https://lucaimbrogno.github.io/metadata/10.png",
     "edition": 10,
-    "date": 1633033813688,
+    "date": 1633047582447,
     "attributes": [
       {
         "trait_type": "Background",
@@ -364,11 +364,11 @@
       },
       {
         "trait_type": "Eyeball",
-        "value": "White"
+        "value": "Red"
       },
       {
         "trait_type": "Eye color",
-        "value": "Red"
+        "value": "Yellow"
       },
       {
         "trait_type": "Iris",
@@ -380,11 +380,11 @@
       },
       {
         "trait_type": "Bottom lid",
-        "value": "Low"
+        "value": "Middle"
       },
       {
         "trait_type": "Top lid",
-        "value": "Middle"
+        "value": "High"
       }
     ],
     "compiler": "HashLips Art Engine"
